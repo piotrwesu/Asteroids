@@ -22,7 +22,7 @@ def main():
 
     Asteroid.containers = (asteroids, updatable, drawable)
 
-    AsteroidField.containers = updatable 
+    AsteroidField.containers = (updatable) 
     asteroidField = AsteroidField()
 
     print("Starting Asteroids with pygame version: ", pygame.version.ver)
@@ -40,7 +40,7 @@ def main():
         
         for a in asteroids:
             if a.collides_with(player):
-                log_event("player hit")
+                log_event("player_hit")
                 print("Game Over")
                 sys.exit()
 
